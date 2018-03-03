@@ -4,6 +4,8 @@ export default function (state = {}, action) {
       return { ...state, list: action.payload }
     case 'VIEW_CAR':
       return { ...state, detail: action.payload }
+    case 'CLEAR':
+      return { ...state, detail: action.payload }
     default:
       return state
   }

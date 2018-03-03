@@ -45,3 +45,15 @@ body{
   margin:0px;
 }
 
+.car_detail img {
+  width:100%
+}
+
+.car_detail h2
+.car_detail h4{
+  margin: 0px;
+}
+
+.car_detail .content{
+  padding:10px;
+}

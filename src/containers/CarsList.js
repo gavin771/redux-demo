@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { bindActionCreators } from 'redux';
+import { getCars } from '../actions'
 
 class CarsList extends Component {
+  componentWillMount () {
+    this.props.getCars('')
+  }
 
   listOfCars = ({ list }) => {
     if (list) {
@@ -38,4 +43,8 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect(mapStateToProps, null)(CarsList)
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators({ getCars }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CarsList)

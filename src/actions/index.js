@@ -19,3 +19,11 @@ export function getCarDetail (id) {
     payload: request
   }
 }
+
+export function clearDetail () {
+
+  return {
+    type: 'CLEAR',
+    payload: []
+  }
+}
