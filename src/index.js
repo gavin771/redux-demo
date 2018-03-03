@@ -10,7 +10,7 @@ import registerServiceWorker from './registerServiceWorker';
 import './app.css';
 
 import App from './components/App';
-import Car from './components/Car'
+import Car from './containers/Car'
 
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore)
 

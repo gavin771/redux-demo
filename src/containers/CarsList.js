@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 
 class CarsList extends Component {
 
-  listOfCars = ({ cars }) => {
-    if (cars) {
-      return cars.map((c) => {
+  listOfCars = ({ list }) => {
+    if (list) {
+      return list.map((c) => {
         return (
-          <Link to={`/cars/${c.id}`} className="car_item" key={c.id}>
+          <Link to={`/car/${c.id}`} className="car_item" key={c.id}>
             <div className="left">
               <img src={`/images/${c.image}`} alt={c.name} />
             </div>
@@ -25,7 +25,7 @@ class CarsList extends Component {
   render () {
     return (
       <div className="cars_list">
-        {this.listOfCars(this.props)}
+        {this.listOfCars(this.props.cars)}
       </div>
     )
   }

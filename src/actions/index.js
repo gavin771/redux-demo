@@ -9,3 +9,13 @@ export function getCars (keywords) {
     payload: request
   }
 }
+
+export function getCarDetail (id) {
+  const url = `${URL_ROOT}/carsIndex?id=${id}`;
+  const request = fetch(url, { method: 'GET' }).then(res => res.json())
+
+  return {
+    type: 'VIEW_CAR',
+    payload: request
+  }
+}
